@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import BurgerMenu from './BurgerMenu.vue';
+
+</script>
+
 <template>
     <nav class="navbar">
         <div class="navbar-left">
@@ -7,7 +12,7 @@
 
         <div class="navbar-right">
             <i class="fas fa-shopping-cart icon"></i>
-            <i class="fas fa-bars icon"></i>
+            <BurgerMenu />
         </div>
     </nav>
 </template>
@@ -34,14 +39,15 @@
     cursor: pointer;
 }
 
-.brand {
-    font-weight: bold;
-    font-size: 1.2rem;
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.navbar-right .icon {
-    font-size: 1.4rem;
-    margin-left: 1rem;
+.icon {
+    font-size: 1.2rem;
     cursor: pointer;
 }
 </style>
