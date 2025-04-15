@@ -59,7 +59,7 @@ const cartIsEmpty = true // temporairement hardcodé
 .btn-stack {
     position: relative;
     width: fit-content;
-    margin-bottom: -1rem;
+    margin-bottom: -1.5rem;
     /* pour qu’ils se collent */
     z-index: 1;
 }
