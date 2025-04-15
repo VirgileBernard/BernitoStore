@@ -1,6 +1,6 @@
 <template>
     <button class="btn btn-white back-btn" @click="goBack">
-        ← back to shop
+        <i class="fa-solid fa-arrow-left"></i> back to shop
     </button>
 </template>
 

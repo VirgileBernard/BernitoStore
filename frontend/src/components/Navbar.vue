@@ -2,7 +2,7 @@
     <nav class="navbar">
         <div class="navbar-left">
             <img src="../assets/img/bernitologo2k24.png" alt="Logo" class="logo" />
-            <span class="brand">Bernito Corporation</span>
+            <!-- <span class="brand">Bernito Store</span> -->
         </div>
 
         <div class="navbar-right">
@@ -20,16 +20,18 @@
     padding: 1rem;
     background-color: var(--color-white);
     border-bottom: 1px solid #ccc;
+    height: 2vh
 }
 
 .navbar-left {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .logo {
-    height: 40px;
-    margin-right: 1rem;
+    width: 50px;
+    cursor: pointer;
 }
 
 .brand {
