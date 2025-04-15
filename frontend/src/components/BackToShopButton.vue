@@ -17,7 +17,13 @@ function goBack() {
 
 <style scoped>
 .back-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border: none;
+    background: none;
     font-size: 0.9rem;
-    margin: 1rem 0;
+    cursor: pointer;
+    margin-bottom: 1rem;
 }
 </style>

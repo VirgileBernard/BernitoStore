@@ -1,17 +1,28 @@
 <template>
     <footer class="footer">
-        <p>© Bernito Corporation 2025 — All rights reserved.</p>
+        <p>© Prod by Bernito — All rights reserved.</p>
     </footer>
 </template>
 
 <style scoped>
 .footer {
-    margin-top: 3rem;
-    padding: 1rem 0;
+    height: 8vh;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-color: var(--color-primary);
+    color: #ccc;
     text-align: center;
-    font-size: 0.9rem;
-    color: var(--color-grey, #888);
-    border-top: 1px solid #ccc;
-    background-color: var(--color-white, #fff);
+    font-size: 1rem;
+    margin-top: 3rem;
+    line-height: 1.4;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+p {
+    margin-right: calc(-45% + 50%);
+    font-weight: bold;
 }
 </style>

@@ -1,10 +1,16 @@
 <template>
-    <NavBar />
-    <div class="about-container">
-        <BackToShopButton />
 
-        <div class="about-content">
-            <h1>About the Bernito Corporation</h1>
+    <NavBar />
+    <header>
+        <div class="backContainer">
+            <BackToShopButton />
+        </div>
+        <BrandHeader />
+    </header>
+
+    <div class="about-container">
+        <div class="about-text">
+            <h1>About us</h1>
             <p>
                 Born out of a passion for sneakers and a desire to unite a community around each new release, the
                 Bernito Corporation dedicated itself to buying and reselling rare sneakers, guiding its members through
@@ -20,7 +26,7 @@
                 Our ambition remains the same: to share our ideas, bring enthusiasts together and offer services that
                 reflect our values of mutual help and creativity.
             </p>
-            <p><strong>Join the Bernito Corporation now!</strong></p>
+            <p>Join the Bernito Corporation now!</p>
         </div>
 
         <Footer />
@@ -31,24 +37,36 @@
 import NavBar from '@/components/NavBar.vue'
 import BackToShopButton from '@/components/BackToShopButton.vue'
 import Footer from '@/components/Footer.vue'
+import BrandHeader from '../components/BrandHeader.vue';
 </script>
 
 
 <style scoped>
+header .backContainer {
+    margin-top: 2vh;
+    margin-left: 5vw;
+}
+
+.brand-header {
+    margin-top: 2vh;
+}
+
 .about-container {
-    padding: 2rem;
-    max-width: 700px;
+    max-width: 90%;
     margin: 0 auto;
+}
+
+.about-text p {
     text-align: left;
-    line-height: 1.6;
-}
-
-.about-content h1 {
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-}
-
-.about-content p {
+    font-size: 0.9rem;
     margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.about-text p:last-child {
+    font-weight: bolder;
+    margin-top: 1.5rem;
+    text-align: center;
+
 }
 </style>
