@@ -11,7 +11,7 @@ import BurgerMenu from './BurgerMenu.vue';
         </div>
 
         <div class="navbar-right">
-            <i class="fas fa-shopping-cart icon"></i>
+            <!-- <i class="fas fa-shopping-cart icon"></i> -->
             <BurgerMenu />
         </div>
     </nav>

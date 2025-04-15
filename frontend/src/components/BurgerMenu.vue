@@ -7,9 +7,10 @@
                 <div class="menu-content">
                     <button class="close-button" @click="closeMenu">×</button>
                     <ul>
-                        <li><a href="/home" @click="closeMenu">Home</a></li>
-                        <li><a href="/about" @click="closeMenu">About</a></li>
-                        <li><a href="/login" @click="closeMenu">Login</a></li>
+                        <li><router-link to="/home" @click="closeMenu">Home</router-link></li>
+                        <li><router-link to="/about" @click="closeMenu">About</router-link></li>
+                        <li><router-link to="/cart" @click="closeMenu">Cart</router-link></li>
+                        <li><router-link to="/login" @click="closeMenu">Login</router-link></li>
                     </ul>
                 </div>
             </div>

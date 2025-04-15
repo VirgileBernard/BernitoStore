@@ -25,5 +25,7 @@ function goBack() {
     font-size: 0.9rem;
     cursor: pointer;
     margin-bottom: 1rem;
+    margin-top: 2vh;
+    margin-left: 5vw;
 }
 </style>

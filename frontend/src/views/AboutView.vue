@@ -42,10 +42,10 @@ import BrandHeader from '../components/BrandHeader.vue';
 
 
 <style scoped>
-header .backContainer {
+/* header .backContainer {
     margin-top: 2vh;
     margin-left: 5vw;
-}
+} */
 
 .brand-header {
     margin-top: 2vh;
