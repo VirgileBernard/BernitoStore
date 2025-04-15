@@ -70,7 +70,7 @@ function triggerAnimation() {
     }
 
     10% {
-        transform: translateX(8px) scale(1);
+        transform: translateX(15px) scale(1);
         opacity: 1;
     }
 
@@ -85,7 +85,7 @@ function triggerAnimation() {
     }
 
     90% {
-        transform: translateX(0) scale(1.2);
+        transform: translateX(0px) scale(1.2);
         opacity: 1;
     }
 

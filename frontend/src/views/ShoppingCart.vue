@@ -64,7 +64,7 @@ const cartIsEmpty = true // temporairement hardcodé
     z-index: 1;
 }
 
-/* Décalage progressif */
+/* Décalage 1btn/2 */
 .btn-stack-2 {
     left: 15px;
     z-index: 2;
