@@ -27,13 +27,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useAuthStore } from '..//store/auth'
 import { useRouter } from 'vue-router'
 import { onMounted } from 'vue'
-import NavBar from '../components/Navbar.vue'
+import Navbar from '../components/NavBar.vue'
 
 
+defineComponent({
+    name: 'LoginView',
+    components: {
+        Navbar
+    }
+})
 
 onMounted(() => {
     if (authStore.accessToken) {
