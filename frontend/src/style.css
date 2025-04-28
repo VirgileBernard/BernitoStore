@@ -66,3 +66,21 @@ label {
   color: var(--color-white);
   border: none;
 }
+
+
+.imgHome {
+  width: 30vw;
+  height: 30vh;
+  border-radius: 8px;
+  /* margin: 0 auto; */
+  opacity: 0.85;
+  transition: 0.3s ease;
+  margin: 0 0 5vh 5vh;
+
+}
+
+
+
+.imgHome:hover {
+  opacity: 1;
+}

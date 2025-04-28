@@ -1,6 +1,6 @@
 <template>
     <div class="brand-header">
-        <img src="../assets/img/bernitologo2k24.png" alt="Bernito Logo" class="brand-logo" />
+        <img src="../assets/img/logoBC-txtInter-2025.png" alt="Bernito Logo" class="brand-logo" />
 
     </div>
 </template>

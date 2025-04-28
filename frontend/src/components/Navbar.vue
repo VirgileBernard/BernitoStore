@@ -6,7 +6,7 @@ import BurgerMenu from './BurgerMenu.vue';
 <template>
     <nav class="navbar">
         <div class="navbar-left">
-            <img src="../assets/img/bernitologo2k24.png" alt="Logo" class="logo" />
+            <img src="../assets/img/logoSansTexte.png" alt="Logo" class="logo" />
             <!-- <span class="brand">Bernito Store</span> -->
         </div>
 
@@ -37,6 +37,7 @@ import BurgerMenu from './BurgerMenu.vue';
 .logo {
     width: 50px;
     cursor: pointer;
+    margin-top: 7px;
 }
 
 
