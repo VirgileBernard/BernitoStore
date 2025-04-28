@@ -10,6 +10,7 @@
     margin-top: 5vh;
     justify-content: center;
     text-align: center;
+    border-bottom: 1px solid #ccc;
 }
 
 .brand-logo {

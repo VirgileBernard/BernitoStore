@@ -8,13 +8,12 @@
 
 
         <form @submit.prevent="handleLogin" class="login-form">
-            <button type="button" class="back-button">← back to shop</button>
 
             <label for="email">your mail :</label>
-            <input type="text" id="email" v-model="username" />
+            <input type="text" id="email" v-model="username" placeholder="your mail" />
 
             <label for="password">your password :</label>
-            <input type="password" id="password" v-model="password" />
+            <input type="password" id="password" v-model="password" placeholder="your password" />
 
             <p class="forgot">I forgot my password</p>
 
@@ -109,15 +108,6 @@ async function handleLogin() {
     width: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.back-button {
-    align-self: flex-start;
-    background: none;
-    border: none;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
 }
 
 

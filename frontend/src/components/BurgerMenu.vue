@@ -19,6 +19,8 @@
 </template>
 
 
+
+
 <script setup lang="ts">
 import { ref } from 'vue'
 const isOpen = ref(false)
@@ -44,7 +46,7 @@ function closeMenu() {
 .menu-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.5); */
     z-index: 99;
 }
 
