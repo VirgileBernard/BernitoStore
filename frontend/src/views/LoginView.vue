@@ -42,7 +42,7 @@ defineComponent({
 
 onMounted(() => {
     if (authStore.accessToken) {
-        router.push('/home')
+        router.push('/')
     }
 })
 
@@ -73,7 +73,7 @@ async function handleLogin() {
 
 
         authStore.loginSuccess(data.access_token, data.refresh_token, username.value)
-        router.push('/home')
+        router.push('/')
     } catch (err) {
         alert('Échec de la connexion')
         console.error(err)

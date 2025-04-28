@@ -14,7 +14,7 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 function goBack() {
-    router.push('/home')
+    router.push('/')
 }
 
 const isAnimating = ref(false)

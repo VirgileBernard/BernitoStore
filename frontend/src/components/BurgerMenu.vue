@@ -7,10 +7,13 @@
                 <div class="menu-content">
                     <button class="close-button" @click="closeMenu">×</button>
                     <ul>
-                        <li><router-link to="/home" @click="closeMenu">Home</router-link></li>
-                        <li><router-link to="/about" @click="closeMenu">About</router-link></li>
-                        <li><router-link to="/cart" @click="closeMenu">Cart</router-link></li>
-                        <li><router-link to="/login" @click="closeMenu">Login</router-link></li>
+                        <li><router-link to="/" @click="closeMenu" class="navLink">Home</router-link></li>
+                        <li><router-link to="/about" @click="closeMenu" class="navLink">About</router-link></li>
+                        <li><router-link to="/cart" @click="closeMenu" class="navLink">Cart</router-link></li>
+                        <!-- <li><router-link to="/hoodie" @click="closeMenu" class="navLink">Hoodies</router-link></li>
+                        <li><router-link to="/tshirts" @click="closeMenu" class="navLink">Tshirts</router-link></li>
+                        <li><router-link to="/accessories" @click="closeMenu" class="navLink">Accessories</router-link></li> -->
+                        <li><router-link to="/login" @click="closeMenu" class="navLink">Login</router-link></li>
                     </ul>
                 </div>
             </div>
@@ -58,6 +61,7 @@ function closeMenu() {
     /* height: 100vh; */
     width: 70vw;
     background: var(--color-white);
+    /* background-color: rgba(255, 255, 255, 0.9); */
     padding: 2rem 1rem;
     box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
     z-index: 100;
@@ -128,5 +132,13 @@ function closeMenu() {
 .slide-leave-from {
     transform: translateX(0);
     opacity: 1;
+}
+
+.navLink {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 </style>
