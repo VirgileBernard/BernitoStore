@@ -25,7 +25,7 @@ import BurgerMenu from './BurgerMenu.vue';
     padding: 1rem;
     background-color: var(--color-white);
     border-bottom: 1px solid #ccc;
-    height: 2vh
+    height: 10vh;
 }
 
 .navbar-left {

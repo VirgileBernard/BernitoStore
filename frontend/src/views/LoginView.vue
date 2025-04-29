@@ -1,5 +1,4 @@
 <template>
-    <NavBar></NavBar>
 
 
     <div class="login-container">

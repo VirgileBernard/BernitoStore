@@ -12,7 +12,17 @@
 
 
 <script lang="ts">
-
+export default {
+    name: 'HoodieBrun',
+    data() {
+        return {
+            // Ajoutez ici les données nécessaires pour le composant
+        }
+    },
+    methods: {
+        // Ajoutez ici les méthodes nécessaires pour le composant
+    }
+}
 
 </script>
 

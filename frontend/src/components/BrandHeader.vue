@@ -7,7 +7,8 @@
 
 <style scoped>
 .brand-header {
-    margin-top: 5vh;
+    display: flex;
+    padding: 2rem;
     justify-content: center;
     text-align: center;
     border-bottom: 1px solid #ccc;

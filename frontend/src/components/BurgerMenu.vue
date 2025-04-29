@@ -59,7 +59,7 @@ function closeMenu() {
     top: 0;
     right: 0;
     /* height: 100vh; */
-    width: 70vw;
+    width: 300px;
     background: var(--color-white);
     /* background-color: rgba(255, 255, 255, 0.9); */
     padding: 2rem 1rem;
