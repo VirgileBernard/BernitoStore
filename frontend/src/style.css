@@ -1,7 +1,7 @@
 :root {
   --font-main: 'Arial', sans-serif;
   --color-bg: #f4f4f4;
-  --color-bg-img: hsla(0, 9%, 71%, 0.174);
+  --color-borderShadow: hsla(0, 13%, 17%, 0.47);
   --color-primary: #000;
   --color-secondary: #444;
   --color-white: #ffffffec;
@@ -68,6 +68,16 @@ label {
   border: none;
 }
 
+
+.section {
+  background-color: var(--color-bg);
+}
+
+.sectionTitle {
+  font-weight: 700;
+  margin-left: 5vw;
+}
+
 .clothesdiv {
   display: flex;
   flex-wrap: wrap;
@@ -78,12 +88,12 @@ label {
 
 .clotheContainer {
   /* border: 1px solid var(--color-primary); */
-  background: var(--color-bg-img);
-  border-radius: 16px;
+  /* background: var(--color-bg-img); */
+  border-radius: 8px;
   width: 150px;
   /* height: 300px; */
   padding: 1rem;
-  box-shadow: 0 0 4px var(--color-primary);
+  box-shadow: 0 0 10px var(--color-borderShadow);
   opacity: 0.85;
   transition: all 0.3s ease;
 }
@@ -96,24 +106,25 @@ label {
   /* height: 100%; */
   width: 100%;
   border-radius: 8px;
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--color-borderShadow);
 }
 
 
 .infoClothe {
   display: flex;
   flex-direction: column;
+  line-height: 1.5;
 }
 
 .price {
   display: flex;
   justify-content: flex-end;
   color: var(--color-primary);
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .nameClothe {
-  font-size: .9rem;
+  font-size: .90rem;
   color: var(--color-primary);
   margin: 0;
   font-weight: lighter;
