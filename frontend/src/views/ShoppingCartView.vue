@@ -1,11 +1,11 @@
 <template>
     <NavBar />
     <div class="cart-container">
-        <header>
+        <!-- <header>
             <div class="backContainer">
                 <BackToShopButton />
             </div>
-        </header>
+        </header> -->
 
         <main class="cart-content">
             <div v-if="cartIsEmpty" class="empty-cart">

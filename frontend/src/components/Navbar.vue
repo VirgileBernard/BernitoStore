@@ -5,10 +5,11 @@ import BurgerMenu from './BurgerMenu.vue';
 
 <template>
     <nav class="navbar">
-        <div class="navbar-left">
-            <img src="../assets/img/logoSansTexte.png" alt="Logo" class="logo" />
-            <!-- <span class="brand">Bernito Store</span> -->
-        </div>
+        <a href="/">
+            <div class="navbar-left">
+                <img src="../assets/img/logoSansTexte.png" alt="Logo" class="logo" />
+            </div>
+        </a>
 
         <div class="navbar-right">
             <!-- <i class="fas fa-shopping-cart icon"></i> -->

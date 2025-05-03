@@ -44,7 +44,9 @@ function triggerAnimation() {
     margin: 2vh 0 0 3vw;
 }
 
-.circle {
+
+/* contour de la flèche */
+/* .circle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +55,7 @@ function triggerAnimation() {
     border: 2px solid var(--color-primary);
     border-radius: 50%;
     overflow: hidden;
-}
+} */
 
 .text {
     font-size: 1rem;
@@ -70,17 +72,17 @@ function triggerAnimation() {
     }
 
     10% {
-        transform: translateX(15px) scale(1);
+        transform: translateX(12px) scale(1);
         opacity: 1;
     }
 
     25% {
-        transform: translateX(-80%) scale(0.85);
+        transform: translateX(-120%) scale(0.85);
         opacity: 0;
     }
 
     75% {
-        transform: translateX(80%) scale(0.85);
+        transform: translateX(120%) scale(0.85);
         opacity: 0;
     }
 

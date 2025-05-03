@@ -1,5 +1,5 @@
 <template>
-    <div class="clotheContainer">
+    <div class="clotheContainer" @click="$emit('openModal')">
         <img src="../../assets/img/HoodieBlueIncline.png" alt="hoodie blue incliné"
             class="hoodie-blue-incline imgHome" />
         <div class="infoClothe">
@@ -23,6 +23,8 @@ export default {
         // Ajoutez ici les méthodes nécessaires pour le composant
     }
 }
+
+
 
 </script>
 
