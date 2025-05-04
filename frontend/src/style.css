@@ -7,7 +7,7 @@
   --font-main: 'Arial', sans-serif;
   --color-bg: #f4f4f4;
   --color-borderShadow: hsla(0, 13%, 17%, 0.47);
-  --color-primary: #000;
+  --color-primary: #0000002a;
   --color-secondary: #444;
   --color-white: #ffffffec;
   --color-grey: #888;
@@ -96,7 +96,7 @@ label {
 .clotheContainer {
   /* border: 1px solid var(--color-primary); */
   /* background: var(--color-bg-img); */
-  border-radius: 8px;
+  border-radius: 4px;
   width: 30%;
   /* height: 300px; */
   padding: 1rem;
