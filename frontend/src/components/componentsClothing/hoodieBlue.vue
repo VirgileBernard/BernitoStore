@@ -17,46 +17,48 @@
             <!-- Contenu du modal -->
             <div class="product-focus">
                 <!-- Header modal -->
-                <header class="focus-header mb-4 flex justify-between items-center">
-                    <div class="product-info">
-                        <h1 class="product-title text-2xl font-bold">{{ product.name }}</h1>
-                        <span class="product-price text-lg">{{ product.price }}€</span>
+                <header class="focus-header mb-4">
+                    <div class="flex">
+                        <button @click="hideModal" class="p-1 rounded hover:bg-gray-200 ml-auto">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
                     </div>
-                    <button @click="hideModal" class="p-1 rounded hover:bg-gray-200">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
+                    <div class="product-info flex">
+                        <h1 class="product-title text-2xl ">{{ product.name }}</h1>
+                        <span class="product-price text-2xl font-bold ml-auto">{{ product.price }}€</span>
+                    </div>
                 </header>
 
                 <!-- Corps : carousel Vue avec transition -->
-                <div class="relative mb-4 mx-auto overflow-hidden" style="width:50vw; height:40vh;">
+                <div class="relative mb-4 mx-auto overflow-hidden w-[600px] h-[400px]">
                     <transition :name="transitionName">
                         <img :key="activeImage" :src="product.images[activeImage]"
                             :alt="`${product.name} vue ${activeImage + 1}`"
                             class="w-full h-full object-contain rounded absolute top-0 left-0" />
                     </transition>
                     <button
-                        class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-75 rounded-full px-2 py-1 hover:bg-opacity-100"
-                        @click="prevImage">‹</button>
+                        class="absolute left-2 top-1/2 transform -translate-y-1/2 rounded-full px-2 py-1 hover:bg-opacity-100"
+                        @click="prevImage"><i class="fa-solid fa-arrow-left"></i></button>
                     <button
-                        class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-75 rounded-full px-2 py-1 hover:bg-opacity-100"
-                        @click="nextImage">›</button>
+                        class="absolute right-2 top-1/2 transform -translate-y-1/2 rounded-full px-2 py-1 hover:bg-opacity-100"
+                        @click="nextImage"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
                 <!-- Description -->
-                <section class="product-description mb-4">
+                <section class="product-description mb-4 text-lg ">
                     <p v-for="(line, i) in product.descriptionLines" :key="i" class="mb-2 text-gray-700">
                         {{ line }}
                     </p>
                 </section>
 
                 <!-- Sélecteur de taille -->
-                <div class="product-sizes mb-6 flex gap-2">
+                <div class="product-sizes flex gap-2 place-self-center">
                     <button v-for="size in sizes" :key="size" :disabled="!product.availableSizes.includes(size)"
                         @click="selectSize(size)" :class="[
-                            'px-3 py-1 border rounded',
+                            'px-3 py-1 border rounded hover:bg-[var(--color-primary)] hover:text-[var(--color-white)]',
                             {
                                 'bg-black text-white': selectedSize === size,
                                 'opacity-50 cursor-not-allowed': !product.availableSizes.includes(size)
@@ -67,14 +69,14 @@
                 </div>
 
                 <!-- Footer actions -->
-                <div class="flex justify-end space-x-3">
+                <div class="flex justify-between mt-8">
                     <button @click="addToFav"
-                        class="px-4 py-2 border rounded hover:bg-gray-100 flex items-center gap-2">
-                        <i class="fa fa-heart"></i> Add to fav
+                        class="px-4 py-2 border rounded hover:bg-[var(--redLiked)] flex items-center gap-2">
+                        add to fav <i class="fa fa-heart"></i>
                     </button>
                     <button @click="addToCart"
                         class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 flex items-center gap-2">
-                        <i class="fa fa-shopping-cart"></i> Add to cart
+                        add to cart <i class="fa fa-shopping-cart"></i>
                     </button>
                 </div>
             </div>

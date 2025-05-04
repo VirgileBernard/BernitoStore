@@ -13,6 +13,7 @@
   --color-grey: #888;
   --radius: 6px;
   --shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  --redLiked: #dc1f1fdd;
 }
 
 html {
