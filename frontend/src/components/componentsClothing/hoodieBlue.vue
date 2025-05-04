@@ -1,7 +1,7 @@
 <template>
     <!-- Bouton / zone déclencheur pour ouvrir la modal -->
     <div class="clotheContainer cursor-pointer" @click="showModal">
-        <img :src="product.images[activeImage]" :alt="`${product.name} vue ${activeImage + 1}`"
+        <img src="../../assets/img/hoodieBlueIncline.png" :alt="`${product.name} vue ${activeImage + 1}`"
             class="hoodie-blue-incline imgHome" />
         <div class="infoClothe">
             <span class="price">{{ product.price }}€</span>
