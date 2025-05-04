@@ -2,7 +2,7 @@
     <header>
         <NavBar />
 
-        <BrandHeader id="Branheader" />
+        <BrandHeader />
     </header>
 
     <section class="hoodiesSection">
@@ -17,13 +17,19 @@
         <div class="tshirts">
             <h3 class="sectionTitle">tshirts :</h3>
             <!-- tous les composants tshirt -->
+            <div class="grid grid-cols-1 sm:grid-cols-2">
+                <ProductDetail v-for="cfg in tshirtsConfig" :key="cfg.name" :product="cfg" />
+            </div>
         </div>
     </section>
 
     <section class="accessoriesSection">
         <div class="accessories">
-            <!-- <h3 class="sectionTitle">accessories :</h3> -->
+            <h3 class="sectionTitle">accessories :</h3>
             <!-- tous les composants accessoires -->
+            <div class="grid grid-cols-1 sm:grid-cols-2">
+                <ProductDetail v-for="cfg in accesConfig" :key="cfg.name" :product="cfg" />
+            </div>
         </div>
     </section>
 
@@ -36,10 +42,6 @@
 
 import NavBar from '../components/NavBar.vue'
 import BrandHeader from '../components/BrandHeader.vue'
-// import HoodieGris from '../components/componentsClothing/hoodieGris.vue'
-// import HoodieBlue from '../components/componentsClothing/hoodieBlue.vue'
-// import HoodieBrun from '../components/componentsClothing/hoodieBrun.vue'
-// import HoodieGreen from '../components/componentsClothing/hoodieGreen.vue'
 import Footer from '../components/Footer.vue'
 
 
@@ -62,6 +64,17 @@ import hoodieGreenDosV3 from '../../src/assets/img/HoodieGreenDosV3.png'
 import hoodieGrisIncline from '../../src/assets/img/HoodieGrisIncline.png'
 import hoodieGrisFace from '../../src/assets/img/HoodieGrisFace.png'
 import hoodieGrisDosV1 from '../../src/assets/img/HoodieGrisDosV1.png'
+
+import frontShirtWhite from '../assets/img/frontShirtWhite.png'
+import backShirtWhite from '../assets/img/backShirtWhite.png'
+
+import frontBlackShirt from '../assets/img/frontBlackShirt.png'
+import backBlackShirt from '../assets/img/backBlackShirt.png'
+
+import faceTapis from '../assets/img/faceTapis.png'
+import realisteTapis from '../assets/img/realisteTapis.png'
+
+import drapLit from '../assets/img/drapLit.png'
 
 const hoodieConfigs = [
     {
@@ -97,6 +110,40 @@ const hoodieConfigs = [
         availableSizes: ['S', 'M', 'L', 'XL']
     }
 ]
+
+const tshirtsConfig = [
+    {
+        name: 'Classic White Shirt',
+        price: 40,
+        images: [frontShirtWhite, backShirtWhite],
+        descriptionLines: ['This shirt is entirely designed and created in Belgium.',
+            'Colors a classic you should have.'],
+        availableSizes: ['S', 'M', 'L', 'XL']
+    },
+    {
+        name: 'Classic Black Shirt',
+        price: 40,
+        images: [frontBlackShirt, backBlackShirt],
+        descriptionLines: ['This shirt is entirely designed and created in Belgium.',
+            'Colors a classic you should have.'],
+        availableSizes: ['S', 'M', 'L']
+    },
+]
+
+const accesConfig = [{
+    name: 'Bernito Carpet',
+    price: 60,
+    images: [faceTapis, realisteTapis],
+    descriptionLines: ['This carpet is entirely designed and created in Belgium.'],
+    availableSizes: ['M']
+},
+{
+    name: 'Bernito Bed Sheet',
+    price: 40,
+    images: [drapLit],
+    descriptionLines: ['This bed sheet is entirely designed and created in Belgium.'],
+    availableSizes: ['M']
+},]
 
 </script>
 
