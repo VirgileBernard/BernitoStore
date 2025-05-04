@@ -7,7 +7,7 @@
   --font-main: 'Arial', sans-serif;
   --color-bg: #f4f4f4;
   --color-borderShadow: hsla(0, 13%, 17%, 0.47);
-  --color-primary: #0000002a;
+  --color-primary: #000000d4;
   --color-secondary: #444;
   --color-white: #ffffffec;
   --color-grey: #888;
@@ -89,24 +89,18 @@ label {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 3rem;
 }
 
 
 .clotheContainer {
-  /* border: 1px solid var(--color-primary); */
-  /* background: var(--color-bg-img); */
   border-radius: 4px;
   width: 30%;
-  /* height: 300px; */
-  padding: 1rem;
-  opacity: 0.85;
+  padding:2rem;
   transition: all 0.3s ease;
 }
 
 .clotheContainer:hover {
   box-shadow: 0 0 10px var(--color-borderShadow) inset;
-  opacity: 1;
 }
 
 .imgHome {
