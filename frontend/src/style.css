@@ -77,27 +77,21 @@ label {
 }
 
 
-.section {
-  background-color: var(--color-bg);
-}
+
 
 .sectionTitle {
   font-weight: 700;
-  margin-left: 5vw;
+  padding: 5vh 0 5vh 5vw;
   text-transform: capitalize;
-}
-
-.clothesdiv {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 
 .clotheContainer {
   border-radius: 4px;
-  width: 30%;
-  padding:2rem;
+  /* max-width: 70vw; */
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
   transition: all 0.3s ease;
 }
 
@@ -106,17 +100,20 @@ label {
 }
 
 .imgHome {
+  width: 50%;
+  margin: 0 auto;
   /* height: 100%; */
-  width: 100%;
   border-radius: 8px;
-  border: 1px solid var(--color-borderShadow);
+  border: 1px solid #ccc;
 }
 
 
 .infoClothe {
   display: flex;
   flex-direction: column;
-  line-height: 1.5;
+  line-height: 1.5;  
+  max-width: 50%;
+    margin: 0 auto;
 }
 
 .price {
