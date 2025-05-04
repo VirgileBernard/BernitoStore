@@ -1,27 +1,28 @@
 <template>
     <div class="brand-header">
-        <img src="../assets/img/logoBC-txtInter-2025.png" alt="Bernito Logo" class="brand-logo" />
-
+        <video :src="videoSrc" autoplay loop muted playsinline class="brand-video" />
     </div>
 </template>
+
+<script setup>
+import videoFile from '../assets/video/logo+texte+background.mp4'
+const videoSrc = videoFile
+</script>
 
 <style scoped>
 .brand-header {
     display: flex;
-    padding: 2rem;
     justify-content: center;
-    text-align: center;
+    padding: 2rem;
     border-bottom: 1px solid #ccc;
+    background-color: #f4f4f4;
+    /* si vous voulez étendre le fond derrière la vidéo */
 }
 
-.brand-logo {
-    width: 150px;
-    margin-bottom: 0.3rem;
-}
+.brand-video {
+    max-width: 80%;
+    height: 30vh;
 
-.brand-title {
-    font-size: 1rem;
-    font-weight: normal;
-    letter-spacing: 1px;
+    object-fit: contain;
 }
 </style>
