@@ -1,12 +1,6 @@
 <template>
     <NavBar />
     <div class="cart-container">
-        <!-- <header>
-            <div class="backContainer">
-                <BackToShopButton />
-            </div>
-        </header> -->
-
         <main class="cart-content">
             <div v-if="cartIsEmpty" class="empty-cart">
                 <h2>Your cart is empty :(</h2>

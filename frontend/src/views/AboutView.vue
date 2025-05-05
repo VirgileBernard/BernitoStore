@@ -2,10 +2,6 @@
     <NavBar />
     <header>
 
-        <!--             
-            <div class="backContainer">
-                <BackToShopButton />
-            </div> -->
         <BrandHeader />
     </header>
 
@@ -45,22 +41,16 @@ import BrandHeader from '../components/BrandHeader.vue';
 
 
 <style scoped>
-/* header .backContainer {
-    margin-top: 2vh;
-    margin-left: 5vw;
-} */
-
-
 .brand-header {
     margin-top: 2vh;
 }
 
 .about-container {
-    /* min-height: 93vh; */
+
     min-height: 55vh;
     max-width: 90%;
     margin: 0 auto;
-    /* max-height: 100vh;    */
+
 }
 
 .about-text h1 {

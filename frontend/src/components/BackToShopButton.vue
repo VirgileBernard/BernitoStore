@@ -45,17 +45,6 @@ function triggerAnimation() {
 }
 
 
-/* contour de la flèche */
-/* .circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2rem;
-    height: 2rem;
-    border: 2px solid var(--color-primary);
-    border-radius: 50%;
-    overflow: hidden;
-} */
 
 .text {
     font-size: 1rem;

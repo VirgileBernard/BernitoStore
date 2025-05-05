@@ -1,8 +1,6 @@
 <template>
-
-
     <div class="login-container">
-        <img src="../assets/img/bernitologo2k24.png" alt="Bernito Logo" class="logo" />
+        <img src="../assets/img/logoSansTexte.png" alt="Bernito Logo" class="logo" />
 
 
 
@@ -16,8 +14,8 @@
 
             <p class="forgot">I forgot my password</p>
 
-            <button type="submit" class="login-button">login</button>
-            <button type="button" class="register-button">i’m new here</button>
+            <button type="submit" class="btn login-button btn-grad">login</button>
+            <button type="button" class="btn register-button btn-secondGrad">i’m new here</button>
         </form>
     </div>
 
@@ -29,14 +27,10 @@ import { defineComponent, ref } from 'vue'
 import { useAuthStore } from '..//store/auth'
 import { useRouter } from 'vue-router'
 import { onMounted } from 'vue'
-import Navbar from '../components/NavBar.vue'
 
 
 defineComponent({
     name: 'LoginView',
-    components: {
-        Navbar
-    }
 })
 
 onMounted(() => {
@@ -86,19 +80,16 @@ async function handleLogin() {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
-    max-width: 400px;
+    width: 60vw;
+    max-width: 700px;
     margin: auto;
-    font-family: sans-serif;
-    background-color: var(--color-bg);
-    border: 1px solid #ccc;
-    margin-top: 5vh;
-    width: 90vw;
+    margin-top: 10vh;
 }
 
 .logo {
+    scale: 130%;
     width: 150px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 5vh;
 }
 
 
@@ -111,32 +102,34 @@ async function handleLogin() {
 
 
 
+.btn-secondGrad {
+    background-image: linear-gradient(to right, #948E99 0%, #2E1437 51%, #948E99 100%)
+}
+
+.btn-secondGrad {
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-secondGrad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
 .forgot {
     text-align: right;
     font-size: 0.8rem;
     color: grey;
     margin-bottom: 1.5rem;
-}
-
-.login-button {
-    background: white;
-    border: 1px solid black;
-    padding: 0.6rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.register-button {
-    background: #444;
-    color: white;
-    border: none;
-    padding: 0.6rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 </style>

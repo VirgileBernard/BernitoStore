@@ -16,7 +16,6 @@ const videoSrc = videoFile
     padding: 2rem;
     border-bottom: 1px solid #ccc;
     background-color: #f4f4f4;
-    /* si vous voulez étendre le fond derrière la vidéo */
 }
 
 .brand-video {

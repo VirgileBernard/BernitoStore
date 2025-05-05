@@ -49,7 +49,6 @@ function closeMenu() {
 .menu-overlay {
     position: fixed;
     inset: 0;
-    /* background: rgba(0, 0, 0, 0.5); */
     z-index: 99;
 }
 
@@ -58,10 +57,8 @@ function closeMenu() {
     position: fixed;
     top: 0;
     right: 0;
-    /* height: 100vh; */
     width: 300px;
     background: var(--color-white);
-    /* background-color: rgba(255, 255, 255, 0.9); */
     padding: 2rem 1rem;
     box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
     z-index: 100;
