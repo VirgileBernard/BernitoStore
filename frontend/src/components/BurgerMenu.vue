@@ -10,9 +10,6 @@
                         <li><router-link to="/" @click="closeMenu" class="navLink">Home</router-link></li>
                         <li><router-link to="/about" @click="closeMenu" class="navLink">About</router-link></li>
                         <li><router-link to="/cart" @click="closeMenu" class="navLink">Cart</router-link></li>
-                        <!-- <li><router-link to="/hoodie" @click="closeMenu" class="navLink">Hoodies</router-link></li>
-                        <li><router-link to="/tshirts" @click="closeMenu" class="navLink">Tshirts</router-link></li>
-                        <li><router-link to="/accessories" @click="closeMenu" class="navLink">Accessories</router-link></li> -->
                         <li><router-link to="/login" @click="closeMenu" class="navLink">Login</router-link></li>
                     </ul>
                 </div>

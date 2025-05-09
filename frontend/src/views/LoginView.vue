@@ -19,14 +19,17 @@
         </form>
     </div>
 
+    <AppSnackbar ref="snackbarRef" v-model:show="snackbar.show" :message="snackbar.message" :type="snackbar.type" />
+
 
 </template>
 
 <script setup lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, onBeforeUnmount, reactive, ref } from 'vue'
 import { useAuthStore } from '..//store/auth'
 import { useRouter } from 'vue-router'
 import { onMounted } from 'vue'
+import AppSnackbar from '../components/AppSnackbar.vue'
 
 
 defineComponent({
@@ -38,12 +41,23 @@ onMounted(() => {
         router.push('/')
     }
 })
+// ref vers ton composant
+// ton état local snackbar})
+
+
 
 
 const username = ref('')
 const password = ref('')
 const authStore = useAuthStore()
 const router = useRouter()
+// État de la snackbar
+const snackbar = reactive({
+    show: false,
+    message: '',
+    type: 'error' as 'success' | 'error' | 'info'
+})
+const snackbarRef = ref<InstanceType<typeof AppSnackbar> | null>(null)
 
 async function handleLogin() {
     try {
@@ -59,23 +73,33 @@ async function handleLogin() {
                 password: password.value
             })
         })
+        if (!response.ok) {
+            snackbar.message = 'Échec de la connexion. Vérifiez vos identifiants.'
+            snackbar.type = 'error'
+            snackbar.show = true
+            return
+        }
 
-        if (!response.ok) throw new Error('Erreur de connexion')
 
         const data = await response.json()
-
-
         authStore.loginSuccess(data.access_token, data.refresh_token, username.value)
         router.push('/')
     } catch (err) {
-        alert('Échec de la connexion')
+        snackbar.message = 'Une erreur est survenue. Réessayez plus tard.'
+        snackbar.type = 'error'
+        snackbar.show = true
         console.error(err)
     }
 }
+
+onBeforeUnmount(() => {
+    document.body.style.overflow = ''
+})
+
 </script>
 
 
-<style>
+<style scoped>
 .login-container {
     display: flex;
     flex-direction: column;
@@ -87,7 +111,7 @@ async function handleLogin() {
 }
 
 .logo {
-    scale: 130%;
+    scale: 110%;
     width: 150px;
     margin-bottom: 5vh;
 }
@@ -118,7 +142,6 @@ async function handleLogin() {
 
 .btn-secondGrad:hover {
     background-position: right center;
-    /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
 }
