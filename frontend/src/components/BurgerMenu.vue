@@ -1,8 +1,8 @@
 <template>
-    <div class="burger-container">
+    <!-- Mobile: burger menu -->
+    <div class="mobile-nav burger-container">
         <i class="fas fa-bars burger-icon" @click="toggleMenu"></i>
         <transition name="slide">
-            <!-- Utilisation de v-if pour que Vue puisse gérer l'animation de l'apparition/disparition -->
             <div v-if="isOpen" class="menu-overlay" @click.self="closeMenu">
                 <div class="menu-content">
                     <button class="close-button" @click="closeMenu">×</button>
@@ -16,13 +16,21 @@
             </div>
         </transition>
     </div>
+
+    <!-- Desktop: horizontal nav buttons -->
+    <nav class="desktop-nav">
+        <ul class="desktop-menu">
+            <li><router-link to="/" class="navButton">Home</router-link></li>
+            <li><router-link to="/about" class="navButton">About</router-link></li>
+            <li><router-link to="/cart" class="navButton">Cart</router-link></li>
+            <li><router-link to="/login" class="navButton">Login</router-link></li>
+        </ul>
+    </nav>
 </template>
-
-
-
 
 <script setup lang="ts">
 import { ref } from 'vue'
+
 const isOpen = ref(false)
 function toggleMenu() {
     isOpen.value = !isOpen.value
@@ -34,6 +42,7 @@ function closeMenu() {
 
 <style scoped>
 .burger-container {
+    display: block;
     position: relative;
 }
 
@@ -42,14 +51,54 @@ function closeMenu() {
     cursor: pointer;
 }
 
-/* Styles de l'overlay inchangés */
+/* Desktop nav hidden by default */
+.desktop-nav {
+    display: none;
+}
+
+/* Desktop menu styling */
+.desktop-menu {
+    display: flex;
+}
+
+.navButton {
+    padding: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navButton:hover {
+    box-shadow: 0 0 10px var(--color-borderShadow) inset;
+}
+
+.clotheContainer {
+    border-radius: 4px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+
+
+/* Responsive: show desktop nav, hide burger on wider screens */
+@media (min-width: 450px) {
+    .mobile-nav {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: block;
+    }
+}
+
+/* existing overlay/menu-content styles… */
 .menu-overlay {
     position: fixed;
     inset: 0;
     z-index: 99;
 }
 
-/* Styles de base du menu sans la transformation initiale */
 .menu-content {
     position: fixed;
     top: 0;
@@ -60,10 +109,8 @@ function closeMenu() {
     box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
     z-index: 100;
     max-height: 90vh;
-    /* sécurité pour écrans petits */
     border-radius: var(--radius);
     overflow-y: auto;
-
 }
 
 .close-button {
@@ -79,12 +126,10 @@ function closeMenu() {
     z-index: 101;
 }
 
-/* Ajout d'une animation de rotation pour le bouton de fermeture */
 .close-button:hover {
     transform: rotate(90deg);
 }
 
-/* Styles des listes et liens du menu */
 .menu-content ul {
     list-style: none;
     padding: 0;
@@ -109,8 +154,7 @@ function closeMenu() {
     font-weight: bold;
 }
 
-
-/* Classes de transition définies par Vue pour le nom "slide" */
+/* slide transition */
 .slide-enter-active,
 .slide-leave-active {
     transition: transform 0.5s ease, opacity 0.5s ease;
