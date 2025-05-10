@@ -65,6 +65,7 @@ function closeMenu() {
     padding: 1.5rem;
     text-decoration: none;
     transition: all 0.3s;
+    font-weight: bolder;
 }
 
 .navButton:hover {
@@ -82,7 +83,7 @@ function closeMenu() {
 
 
 /* Responsive: show desktop nav, hide burger on wider screens */
-@media (min-width: 450px) {
+@media (min-width: 500px) {
     .mobile-nav {
         display: none;
     }
